@@ -86,6 +86,10 @@ void output(char *file, SRec **head){
 
 
 void sort(SRec *node, SRec **head, SRec **tail){
+    if(node == NULL){
+        return;
+    }
+
     if(node->left != NULL){
         sort(node->left, head, tail);
     }
